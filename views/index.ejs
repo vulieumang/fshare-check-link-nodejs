@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fshare checklink</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container" style="margin-top:50px">
+    <form id="form" method="post" action="">
+      <div class="mb-3">
+        <h1>Fshare checklink</h1>
+        <label for="exampleInputEmail1" class="form-label">Link</label>
+        <input type="text" class="form-control" name="link" id="link" aria-describedby="emailHelp" value="https://www.fshare.vn/file/X5K72DHY4FGS?token=1648636837">
+        <div id="emailHelp" class="form-text">ex: https://www.fshare.vn/file/X5K72DHY4FGS?token=1648636837</div>
+      </div>
+      <button type="submit"  class="btn btn-primary">Submit</button>
+    </form>
+    <img id="loading" width="30px" style="display:none" src="loading.gif" alt="" srcset="">
+    <div class="mb-3">
+      <textarea class="form-text" name="" id="res" cols="" style="
+      width: 100%;
+  " rows="10"><% if (typeof item == 'object') { %>
+Tên file: <%- item.name %>
+Link:  <%- item.link %>
+Size: <%- item.size %>
+Mình cảm ơn<% } %>
+      </textarea>
+    </div>
+    
+  </div>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>
