@@ -12,8 +12,8 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const port = 3001;
-// const port = process.env.PORT || 3001;
+// const port = 3001;
+const port = process.env.PORT || 3001;
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // routes will go here
